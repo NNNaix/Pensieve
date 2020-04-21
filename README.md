@@ -14,6 +14,7 @@
 - [数据结构](./src/data-structure)
 - [设计模式](./src/desgin-pattern)
 - [算法](./src/algorithm)
+- [编译原理](./src/compiler-theory/README.md)
 - [网络协议](./src/network-protocol)
 - [软件工程设计可视化](./src/software-engineering-design-visualization)
 - [数据可视化](./src/data-visualization)
