@@ -1,5 +1,7 @@
 # 冒泡排序
+
 **冒泡排序** 比较所有相邻的两个项，如果第一个比第二个大，则交换它们。元素项向上移动至正确的顺序，就好像气泡升至表面一样，冒泡排序因此得名。
+
 ## 1. 思路
 
 对于 n 项的数组，进行 n 轮冒泡循环，每一次冒泡循环中，从数组的第一项开始，和邻接索引递增的下一项进行比较，如果满足比较条件则交换双方索引，直至比较至最后一项。
@@ -43,26 +45,26 @@ function bubbleSort(array, compareFn = defaultCompare) {
 ```javascript
 function optimizedBubbleSort(originArray, compareFn = defaultCompare) {
   // 保证源数据不可变
-  const array = [...originArray]
+  const array = [...originArray];
   const { length } = array;
-  let swaped = false
+  let swaped = false;
 
   // 用 k 表示本轮冒泡后已排序的数组项数量，所以需要排序的数量是 length - k
   for (let k = 1; k < length; k++) {
     // 每轮冒泡开始都重新标记是否发生 swap
-    let swaped = false
+    let swaped = false;
 
     for (let i = 0; j < length - k; i++) {
       if (compareFn(array[j], array[i + 1]) === Compare.BIGGER_THAN) {
         swap(array, i, i + 1);
 
         // 标记已发生 swap
-        swaped = true
+        swaped = true;
       }
     }
     // 如果该轮冒泡完成一次swap都没有发生，说明已完成排序，不需要继续执行循环。
-    if(!swaped){
-        return array
+    if (!swaped) {
+      return array;
     }
   }
   return array;
